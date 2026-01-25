@@ -1,0 +1,6 @@
+{
+  "Walk towards the kitchen area. Keep walking along the kitchen area towards the doorway. Turn right and exit the kitchen area walking across the small living room area and into the bedroom to you left. ": {
+    "actions": "1. Walk towards the kitchen area  \n2. Keep walking along the kitchen area  \n3. Go towards the doorway  \n4. Turn right  \n5. Exit the kitchen area  \n6. Walk across the small living room area  \n7. Enter the bedroom to your left",
+    "landmarks": "1. the kitchen area  \n2. the kitchen area  \n3. the doorway  \n4. (no landmark)  \n5. the kitchen area  \n6. the small living room area  \n7. the bedroom to your left"
+  }
+}

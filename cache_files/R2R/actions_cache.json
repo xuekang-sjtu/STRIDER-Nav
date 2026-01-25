@@ -1,0 +1,402 @@
+{
+  "Go straight past the pool. Walk between the bar and chairs.  Stop when you get to the corner of the bar.  That's where you will wait. ": {
+    "actions": "1. Go straight past the pool.  \n2. Walk between the bar and chairs.  \n3. Stop when you get to the corner of the bar.  \n4. Wait at the corner of the bar.",
+    "landmarks": "1. the pool  \n2. the bar  \n3. chairs  \n4. the corner of the bar  \n5. the corner of the bar"
+  },
+  "Turn around and walk to the end of the bed. At the end of the bed turn right and walk to the hallway. Once at the entrance way, walk through the hallway to the next room. ": {
+    "actions": "1. Turn around  \n2. Walk to the end of the bed  \n3. Turn right at the end of the bed  \n4. Walk to the hallway  \n5. Walk through the hallway to the next room",
+    "landmarks": "1. the end of the bed  \n2. the hallway  \n3. the next room"
+  },
+  "Leave sitting room to living room, turn right around couch, turn left and follow couch turn slight right into exercise room and stop by treadmill. ": {
+    "actions": "1. Leave sitting room to living room  \n2. Turn right around couch  \n3. Turn left  \n4. Follow couch  \n5. Turn slight right into exercise room  \n6. Stop by treadmill",
+    "landmarks": "1. sitting room  \n2. living room  \n3. couch  \n4. exercise room  \n5. treadmill"
+  },
+  "Go straight and then turn to the right and go to the bathroom door.  Go through the doorway and walk through the bathroom to the other door.  You will then be in a gym.  Stop when you get into this room and wait. ": {
+    "actions": "1. Go straight  \n2. Turn to the right  \n3. Go to the bathroom door  \n4. Go through the doorway  \n5. Walk through the bathroom to the other door  \n6. Stop when you get into the gym  \n7. Wait",
+    "landmarks": "1. bathroom door  \n2. doorway  \n3. bathroom  \n4. other door  \n5. gym"
+  },
+  "Walk past the kitchen and go behind the couch and take a right into the fitness room. Stop next to the treadmill. ": {
+    "actions": "1. Walk past the kitchen  \n2. Go behind the couch  \n3. Take a right into the fitness room  \n4. Stop next to the treadmill",
+    "landmarks": "1. the kitchen  \n2. the couch  \n3. the fitness room  \n4. the treadmill"
+  },
+  "Walk forward, take a left around the corner and walk all the way to the end of the hallway, and stop at the door before the bedroom. ": {
+    "actions": "1. Walk forward  \n2. Take a left around the corner  \n3. Walk all the way to the end of the hallway  \n4. Stop at the door before the bedroom",
+    "landmarks": "1. the corner  \n2. the end of the hallway  \n3. the door before the bedroom"
+  },
+  "Go down the hall past some plants towards a doorway to the hot tub and some lounge chairs.  Stop in front of the large tub. ": {
+    "actions": "1. Go down the hall  \n2. Pass some plants  \n3. Move towards a doorway to the hot tub and some lounge chairs  \n4. Stop in front of the large tub",
+    "landmarks": "1. the hall  \n2. some plants  \n3. a doorway to the hot tub  \n4. some lounge chairs  \n5. the large tub"
+  },
+  "Leave the bathroom.  Go through the door straight across the hall walk straight through the kitchen.  Turn left at the end of the bar turn left again and go in the room to the right stand in between the closet and the sink. ": {
+    "actions": "1. Leave the bathroom.  \n2. Go through the door straight across the hall.  \n3. Walk straight through the kitchen.  \n4. Turn left at the end of the bar.  \n5. Turn left again.  \n6. Go in the room to the right.  \n7. Stand in between the closet and the sink.",
+    "landmarks": "1. the bathroom  \n2. the door straight across the hall  \n3. the kitchen  \n4. the end of the bar  \n5. the room to the right  \n6. the closet  \n7. the sink"
+  },
+  "Walk passed the dining table and continue towards the kitchen. Walk through the kitchen passed the counters and stove and stop near the sink. ": {
+    "actions": "1. Walk passed the dining table  \n2. Continue towards the kitchen  \n3. Walk through the kitchen  \n4. Pass the counters and stove  \n5. Stop near the sink",
+    "landmarks": "1. dining table  \n2. kitchen  \n3. counters  \n4. stove  \n5. sink"
+  },
+  "Walk into the kitchen area. Walk by the sink and oven. Walk straight into the hallway. turn right into the little room. Turn left and walk into the bedroom. Stop by the corner of the bed. ": {
+    "actions": "1. Walk into the kitchen area.  \n2. Walk by the sink and oven.  \n3. Walk straight into the hallway.  \n4. Turn right into the little room.  \n5. Turn left and walk into the bedroom.  \n6. Stop by the corner of the bed.",
+    "landmarks": "1. kitchen area  \n2. sink  \n3. oven  \n4. hallway  \n5. little room  \n6. bedroom  \n7. corner of the bed"
+  },
+  "Take a right at the large clock and travel straight through the kitchen, when you see the thermostat on the wall you are right next to the washroom. ": {
+    "actions": "1. Take a right at the large clock  \n2. Travel straight through the kitchen  \n3. Look for the thermostat on the wall  \n4. Locate the washroom next to the thermostat",
+    "landmarks": "1. large clock  \n2. kitchen  \n3. thermostat on the wall  \n4. washroom next to the thermostat"
+  },
+  "Walk towards the kitchen area. Keep walking along the kitchen area towards the doorway. Turn right and exit the kitchen area walking across the small living room area and into the bedroom to you left. ": {
+    "actions": "1. Walk towards the kitchen area  \n2. Keep walking along the kitchen area towards the doorway  \n3. Turn right  \n4. Exit the kitchen area  \n5. Walk across the small living room area  \n6. Enter the bedroom to your left",
+    "landmarks": "1. the kitchen area  \n2. the doorway  \n3. the kitchen area  \n4. the small living room area  \n5. the bedroom"
+  },
+  "Walk through the doorway to the right of the dining room table then go through the doorway by the flower pot.  Take the doorway directly left of the staircase and wait there. ": {
+    "actions": "1. Walk through the doorway to the right of the dining room table  \n2. Go through the doorway by the flower pot  \n3. Take the doorway directly left of the staircase  \n4. Wait there",
+    "landmarks": "1. the doorway to the right of the dining room table  \n2. the doorway by the flower pot  \n3. the doorway directly left of the staircase  \n4. the staircase"
+  },
+  "Go through living room, through the door on the to the right, through the den, through the dining to, to the outdoor foyer. Stop before going outside. ": {
+    "actions": "1. Go through the living room  \n2. Go through the door on the right  \n3. Go through the den  \n4. Go through the dining room  \n5. Go to the outdoor foyer  \n6. Stop before going outside",
+    "landmarks": "1. the living room  \n2. the door on the right  \n3. the den  \n4. the dining room  \n5. the outdoor foyer"
+  },
+  "you are in a closet, walk forward, turn right to walk out of closet into a bed room. turn right and see bath room, walk into bathroom and wait near the tub and sink. ": {
+    "actions": "1. Walk forward  \n2. Turn right to walk out of closet into a bedroom  \n3. Turn right to see bathroom  \n4. Walk into bathroom  \n5. Wait near the tub and sink",
+    "landmarks": "1. closet  \n2. bedroom  \n3. bathroom  \n4. tub  \n5. sink"
+  },
+  "Walk across the floor and wait the archway. ": {
+    "actions": "1. Walk across the floor  \n2. Wait at the archway",
+    "landmarks": "1. the floor  \n2. the archway"
+  },
+  "Go forward by the windows, and then stop by the lamp. ": {
+    "actions": "1. Go forward by the windows  \n2. Stop by the lamp",
+    "landmarks": "1. windows  \n2. lamp"
+  },
+  "Walk out of the room keeping the fireplace on your left. Walk down the long corridor and stop once you reach the next set of doors. ": {
+    "actions": "1. Walk out of the room keeping the fireplace on your left  \n2. Walk down the long corridor  \n3. Stop once you reach the next set of doors",
+    "landmarks": "1. fireplace  \n2. long corridor  \n3. next set of doors"
+  },
+  "Walk up stairs. At top of stairs turn right. Walk straight to bedroom. Turn left and walk to bed lamp.Turn left and enter closet. Stop at rug. ": {
+    "actions": "1. Walk up stairs.  \n2. At top of stairs turn right.  \n3. Walk straight to bedroom.  \n4. Turn left and walk to bed lamp.  \n5. Turn left and enter closet.  \n6. Stop at rug.",
+    "landmarks": "1. stairs  \n2. top of stairs  \n3. bedroom  \n4. bed lamp  \n5. closet  \n6. rug"
+  },
+  "Head across the room towards the front door then turn left. Go up the stairs and turn right. Enter the bedroom then wait. ": {
+    "actions": "1. Head across the room towards the front door  \n2. Turn left  \n3. Go up the stairs  \n4. Turn right  \n5. Enter the bedroom  \n6. Wait",
+    "landmarks": "1. the room  \n2. the front door  \n3. the stairs  \n4. the bedroom"
+  },
+  "Go through the door and turn left. Go to the left of the stairs. Stop in the doorway to the left of the white double doors. ": {
+    "actions": "1. Go through the door  \n2. Turn left  \n3. Go to the left of the stairs  \n4. Stop in the doorway to the left of the white double doors",
+    "landmarks": "1. the door  \n2. the stairs  \n3. the doorway  \n4. the white double doors"
+  },
+  "Leave the bedroom and take a left in the hallway. Go straight and go into the room that is the second on the left. Stop in the doorway to the room. ": {
+    "actions": "1. Leave the bedroom  \n2. Take a left in the hallway  \n3. Go straight  \n4. Go into the room that is the second on the left  \n5. Stop in the doorway to the room",
+    "landmarks": "1. the bedroom  \n2. the hallway  \n3. the room that is the second on the left  \n4. the doorway to the room"
+  },
+  "Leave the bedroom and take a right in the hall, and walk straight. Take a left into the third entry way on your left and enter the bedroom. Stop in the doorway to the bedroom. ": {
+    "actions": "1. Leave the bedroom  \n2. Take a right in the hall  \n3. Walk straight  \n4. Take a left into the third entry way on your left  \n5. Enter the bedroom  \n6. Stop in the doorway to the bedroom",
+    "landmarks": "1. the bedroom  \n2. the hall  \n3. the third entry way on your left  \n4. the bedroom  \n5. the doorway to the bedroom"
+  },
+  "Walk through the dining room and kitchen air to the short flight of stairs. Walk up the short flight of stairs. Wait by the door at the top of the stairs. ": {
+    "actions": "1. Walk through the dining room  \n2. Walk through the kitchen  \n3. Walk to the short flight of stairs  \n4. Walk up the short flight of stairs  \n5. Wait by the door at the top of the stairs",
+    "landmarks": "1. the dining room  \n2. the kitchen  \n3. the short flight of stairs  \n4. the short flight of stairs  \n5. the door at the top of the stairs"
+  },
+  "Leave the bathroom and closet. Exit the bedroom and take a right. Enter the room on the right and stop in the doorway. ": {
+    "actions": "1. Leave the bathroom and closet.  \n2. Exit the bedroom.  \n3. Take a right.  \n4. Enter the room on the right.  \n5. Stop in the doorway.",
+    "landmarks": "1. the bathroom  \n2. the closet  \n3. the bedroom  \n4. the room on the right  \n5. the doorway"
+  },
+  "Turn to face black door. Walk forward. Turn right to walk past stairs. Stop in front of door on right. ": {
+    "actions": "1. Turn to face black door.  \n2. Walk forward.  \n3. Turn right to walk past stairs.  \n4. Stop in front of door on right.",
+    "landmarks": "1. black door  \n2. stairs  \n3. door on right"
+  },
+  "Go toward the house and through the sliding doors.  Turn right and stop by the dinning room table. ": {
+    "actions": "1. Go toward the house  \n2. Go through the sliding doors  \n3. Turn right  \n4. Stop by the dining room table",
+    "landmarks": "1. the house  \n2. the sliding doors  \n3. the dining room table"
+  },
+  "Go into the living area with the fireplace. Stop in the area between the two white sofas, next to the entrance to the dining room. ": {
+    "actions": "1. Go into the living area with the fireplace  \n2. Stop in the area between the two white sofas  \n3. Position next to the entrance to the dining room",
+    "landmarks": "1. living area with the fireplace  \n2. two white sofas  \n3. entrance to the dining room"
+  },
+  "Face the indoor grill and turn right. Walk straight through the door way.  Walk passed the microwave on the left. Walk through the doorway and stop beside the door. ": {
+    "actions": "1. Face the indoor grill  \n2. Turn right  \n3. Walk straight through the doorway  \n4. Walk past the microwave on the left  \n5. Walk through the doorway  \n6. Stop beside the door",
+    "landmarks": "1. indoor grill  \n2. doorway  \n3. microwave  \n4. doorway  \n5. door"
+  },
+  "Walk down the flight of stairs to the lower level. Walk into the room ahead with the tile mosaic on the floor. Walk around the corner through the open arched door to the right with rug on the ground. ": {
+    "actions": "1. Walk down the flight of stairs to the lower level.  \n2. Walk into the room ahead with the tile mosaic on the floor.  \n3. Walk around the corner through the open arched door to the right with rug on the ground.",
+    "landmarks": "1. flight of stairs  \n2. lower level  \n3. room ahead  \n4. tile mosaic on the floor  \n5. corner  \n6. open arched door  \n7. rug on the ground"
+  },
+  "Walk out of the room and past the stairs. Walk through the second hallway to the left. Turn left and walk into the room. Stop in front of the dining room table. ": {
+    "actions": "1. Walk out of the room  \n2. Walk past the stairs  \n3. Walk through the second hallway to the left  \n4. Turn left  \n5. Walk into the room  \n6. Stop in front of the dining room table",
+    "landmarks": "1. the room  \n2. the stairs  \n3. the second hallway to the left  \n4. the room  \n5. the dining room table"
+  },
+  "Walk towards oven and turn right through doorway. Go down hallway and turn left  and wait at bathroom. ": {
+    "actions": "1. Walk towards oven  \n2. Turn right through doorway  \n3. Go down hallway  \n4. Turn left  \n5. Wait at bathroom",
+    "landmarks": "1. oven  \n2. doorway  \n3. hallway  \n4. bathroom"
+  },
+  "Leave the closet, and walk out of the bedroom. Stop once you exit the bedroom door. ": {
+    "actions": "1. Leave the closet  \n2. Walk out of the bedroom  \n3. Stop once you exit the bedroom door",
+    "landmarks": "1. the closet  \n2. the bedroom  \n3. the bedroom door"
+  },
+  "Turn around and go to your left. Then go through the doorway on your left. Then turn right by the island. ": {
+    "actions": "1. Turn around  \n2. Go to your left  \n3. Go through the doorway on your left  \n4. Turn right by the island",
+    "landmarks": "1. doorway on your left  \n2. island"
+  },
+  "Take a sharp left. Walk under the chandelier and wait next to the billiards table. ": {
+    "actions": "1. Take a sharp left  \n2. Walk under the chandelier  \n3. Wait next to the billiards table",
+    "landmarks": "1. sharp left  \n2. chandelier  \n3. billiards table"
+  },
+  "Turn right to walk through the right doorway. Walk through the left doorway. Stop at the entrance to the dining room. ": {
+    "actions": "1. Turn right to walk through the right doorway.  \n2. Walk through the left doorway.  \n3. Stop at the entrance to the dining room.",
+    "landmarks": "1. right doorway  \n2. left doorway  \n3. entrance to the dining room"
+  },
+  "Go straight into the door in front of you, turn left and then turn left again to go into the bathroom. Wait by the second sink. ": {
+    "actions": "1. Go straight into the door in front of you  \n2. Turn left  \n3. Turn left again  \n4. Go into the bathroom  \n5. Wait by the second sink",
+    "landmarks": "1. the door in front of you  \n2. the bathroom  \n3. the second sink"
+  },
+  "Turn right, and then make a right again entering the room that is on the right of the painting placed on the wall. Walk inside the room, and stop next to the mirror sliding closet doors. ": {
+    "actions": "1. Turn right  \n2. Make a right again  \n3. Enter the room that is on the right of the painting placed on the wall  \n4. Walk inside the room  \n5. Stop next to the mirror sliding closet doors",
+    "landmarks": "1. the painting placed on the wall  \n2. the room that is on the right of the painting placed on the wall  \n3. the mirror sliding closet doors"
+  },
+  "Exit the bathroom. Turn left and then turn right. Turn left and go into the other bathroom. Wait near the sink. ": {
+    "actions": "1. Exit the bathroom  \n2. Turn left  \n3. Turn right  \n4. Turn left  \n5. Go into the other bathroom  \n6. Wait near the sink",
+    "landmarks": "1. the bathroom  \n2. the other bathroom  \n3. the sink"
+  },
+  "Exit the bedroom. Walk by the bathroom. Take the first left. Walk through the first door on the left. Stop by the sink. ": {
+    "actions": "1. Exit the bedroom  \n2. Walk by the bathroom  \n3. Take the first left  \n4. Walk through the first door on the left  \n5. Stop by the sink",
+    "landmarks": "1. bedroom  \n2. bathroom  \n3. first left  \n4. first door on the left  \n5. sink"
+  },
+  "walk straight to hallway on right. turn right and follow hallway, at the end of hallway turn slight left and enter living room. Stop at couch. ": {
+    "actions": "1. Walk straight to hallway on right  \n2. Turn right  \n3. Follow hallway  \n4. At the end of hallway, turn slight left  \n5. Enter living room  \n6. Stop at couch",
+    "landmarks": "1. hallway on right  \n2. hallway  \n3. end of hallway  \n4. living room  \n5. couch"
+  },
+  "Turn to the right and go out the bathroom door.  Turn to the right a little more.  Go through the galley kitchen.  Walk between the stove and the island.  When you get past the island, stop, and wait. ": {
+    "actions": "1. Turn to the right  \n2. Go out the bathroom door  \n3. Turn to the right a little more  \n4. Go through the galley kitchen  \n5. Walk between the stove and the island  \n6. Stop  \n7. Wait",
+    "landmarks": "1. bathroom door  \n2. galley kitchen  \n3. stove  \n4. island"
+  },
+  "Go down the walkway between the bar and the floor cabinets. Make a left at the door leading to the bedroom. ": {
+    "actions": "1. Go down the walkway between the bar and the floor cabinets.  \n2. Make a left at the door leading to the bedroom.",
+    "landmarks": "1. walkway between the bar and the floor cabinets  \n2. door leading to the bedroom"
+  },
+  "Exit the bathroom and enter the hall. Take a left in the hall and then enter another hall. Take a right at this hall, then take a left to enter another bathroom. ": {
+    "actions": "1. Exit the bathroom  \n2. Enter the hall  \n3. Take a left in the hall  \n4. Enter another hall  \n5. Take a right at this hall  \n6. Take a left  \n7. Enter another bathroom",
+    "landmarks": "1. bathroom  \n2. hall  \n3. hall  \n4. another hall  \n5. this hall  \n6. another bathroom"
+  },
+  "Walk through kitchen. Make left after spider plant. Wait at open door on left. ": {
+    "actions": "1. Walk through kitchen  \n2. Make left after spider plant  \n3. Wait at open door on left",
+    "landmarks": "1. kitchen  \n2. spider plant  \n3. open door on left"
+  },
+  "Turn left and walk straight across the kitchen and through the storage area. Once out, turn right and then enter the last room on the left and stop in the doorway. ": {
+    "actions": "1. Turn left  \n2. Walk straight across the kitchen  \n3. Walk through the storage area  \n4. Turn right  \n5. Enter the last room on the left  \n6. Stop in the doorway",
+    "landmarks": "1. kitchen  \n2. storage area  \n3. last room on the left  \n4. doorway"
+  },
+  "Exit the room and turn left, head toward the kitchen and turn right. Go through the kitchen and out the door. Wait right at the bathroom door. ": {
+    "actions": "1. Exit the room  \n2. Turn left  \n3. Head toward the kitchen  \n4. Turn right  \n5. Go through the kitchen  \n6. Go out the door  \n7. Wait right at the bathroom door",
+    "landmarks": "1. the room  \n2. the kitchen  \n3. the kitchen  \n4. the door  \n5. the bathroom door"
+  },
+  "walk through kitchen, turn right at bathroom, immediately left again and walk through doorway to bedroom and stop. ": {
+    "actions": "1. Walk through kitchen  \n2. Turn right at bathroom  \n3. Turn immediately left  \n4. Walk through doorway to bedroom  \n5. Stop",
+    "landmarks": "1. kitchen  \n2. bathroom  \n3. doorway  \n4. bedroom"
+  },
+  "Turn around and walk through the door into the hallway. Turn left and go forward and stop next to the bed. Then turn left and go into the bathroom. ": {
+    "actions": "1. Turn around  \n2. Walk through the door into the hallway  \n3. Turn left  \n4. Go forward  \n5. Stop next to the bed  \n6. Turn left  \n7. Go into the bathroom",
+    "landmarks": "1. the door  \n2. the hallway  \n3. the bed  \n4. the bathroom"
+  },
+  "Leave the bedroom. Turn left into the hallway opposite the bookshelf. Go to the end of the hallway. Go left to the white couch. ": {
+    "actions": "1. Leave the bedroom  \n2. Turn left into the hallway opposite the bookshelf  \n3. Go to the end of the hallway  \n4. Go left to the white couch",
+    "landmarks": "1. bedroom  \n2. hallway opposite the bookshelf  \n3. end of the hallway  \n4. white couch"
+  },
+  "Walk past the sink, and through the open door. Make a hard left at the closed brown and frosted glass french doors, and then a hard right.. Walk past the kitchen, and wait near the sofa end table. ": {
+    "actions": "1. Walk past the sink  \n2. Walk through the open door  \n3. Make a hard left at the closed brown and frosted glass french doors  \n4. Make a hard right  \n5. Walk past the kitchen  \n6. Wait near the sofa end table",
+    "landmarks": "1. the sink  \n2. the open door  \n3. the closed brown and frosted glass french doors  \n4. the kitchen  \n5. the sofa end table"
+  },
+  "Turn left to face bed. Walk past bed and out of door. Walk across hall to next bedroom. Stop in doorway. ": {
+    "actions": "1. Turn left to face bed  \n2. Walk past bed  \n3. Walk out of door  \n4. Walk across hall to next bedroom  \n5. Stop in doorway",
+    "landmarks": "1. bed  \n2. bed  \n3. door  \n4. hall, next bedroom  \n5. doorway"
+  },
+  "Go straight, pass the piano and the pictures on the wall then turn left and head down the hallway then turn right and stop by the bed. ": {
+    "actions": "1. Go straight  \n2. Pass the piano  \n3. Pass the pictures on the wall  \n4. Turn left  \n5. Head down the hallway  \n6. Turn right  \n7. Stop by the bed",
+    "landmarks": "1. the piano  \n2. the pictures on the wall  \n3. the hallway  \n4. the bed"
+  },
+  "Exit the kitchen, walk down the hall and wait in the exercise room. ": {
+    "actions": "1. Exit the kitchen  \n2. Walk down the hall  \n3. Wait in the exercise room",
+    "landmarks": "1. the kitchen  \n2. the hall  \n3. the exercise room"
+  },
+  "Turn to your right and walk down the hallway past the piano to the end. Turn left when you reach the dresser drawers and stop in the doorway. ": {
+    "actions": "1. Turn to your right  \n2. Walk down the hallway past the piano to the end  \n3. Turn left when you reach the dresser drawers  \n4. Stop in the doorway",
+    "landmarks": "1. hallway  \n2. piano  \n3. dresser drawers  \n4. doorway"
+  },
+  "Exit the bedroom and walk strait across the hallway. Enter the door at the back of the bedroom and wait near the sink. ": {
+    "actions": "1. Exit the bedroom  \n2. Walk straight across the hallway  \n3. Enter the door at the back of the bedroom  \n4. Wait near the sink",
+    "landmarks": "1. the bedroom  \n2. the hallway  \n3. the door at the back of the bedroom  \n4. the sink"
+  },
+  "Take a left and take a right at the doll hutch. Walk into the bedroom and take a left. Walk into the bathroom and wait in front of the sink. ": {
+    "actions": "1. Take a left  \n2. Take a right at the doll hutch  \n3. Walk into the bedroom  \n4. Take a left  \n5. Walk into the bathroom  \n6. Wait in front of the sink",
+    "landmarks": "1. the doll hutch  \n2. the bedroom  \n3. the bathroom  \n4. the sink"
+  },
+  "Exit bathroom and follow hallway through archway directly in front. Turn right when hallway ends at pictures and table. Follow hallway passed piano and stop in the circle on the hallway floor. ": {
+    "actions": "1. Exit bathroom  \n2. Follow hallway through archway directly in front  \n3. Turn right when hallway ends at pictures and table  \n4. Follow hallway passed piano  \n5. Stop in the circle on the hallway floor",
+    "landmarks": "1. bathroom  \n2. hallway  \n3. archway  \n4. pictures  \n5. table  \n6. piano  \n7. circle on the hallway floor"
+  },
+  "Turn right into hall, walk straight into the kitchen, stop at refrigerator. ": {
+    "actions": "1. Turn right into hall  \n2. Walk straight into the kitchen  \n3. Stop at refrigerator",
+    "landmarks": "1. hall  \n2. kitchen  \n3. refrigerator"
+  },
+  "Turn left and walk across the hallway. Turn left again and walk across this hallway and wait by the bathtub. ": {
+    "actions": "1. Turn left  \n2. Walk across the hallway  \n3. Turn left again  \n4. Walk across this hallway  \n5. Wait by the bathtub",
+    "landmarks": "1. hallway  \n2. hallway  \n3. bathtub"
+  },
+  "Exit the room and then go down the hallway until you get a frame on the wall to your right with a bear and balloons that says \"welcome\" and wait there. ": {
+    "actions": "1. Exit the room  \n2. Go down the hallway  \n3. Locate a frame on the wall to your right with a bear and balloons that says \"welcome\"  \n4. Wait there",
+    "landmarks": "1. the room  \n2. the hallway  \n3. a frame on the wall to your right with a bear and balloons that says \"welcome\""
+  },
+  "Go all the way down the hall until you see a white vase and then make a left. Following that, make a left directly into the bathroom which will be the first door on the left and wait there. ": {
+    "actions": "1. Go all the way down the hall  \n2. Look for a white vase  \n3. Make a left turn  \n4. Follow the path  \n5. Make another left turn into the bathroom  \n6. Identify the first door on the left  \n7. Enter the bathroom  \n8. Wait inside the bathroom",
+    "landmarks": "1. the hall  \n2. a white vase  \n3. the path  \n4. the bathroom  \n5. the first door on the left  \n6. the bathroom"
+  },
+  "Turn left and exit the bedroom. Walk past the stairs into the rightmost doorway. Wait by the entrance of the bedroom. ": {
+    "actions": "1. Turn left  \n2. Exit the bedroom  \n3. Walk past the stairs  \n4. Enter the rightmost doorway  \n5. Wait by the entrance of the bedroom",
+    "landmarks": "1. the bedroom  \n2. the stairs  \n3. the rightmost doorway  \n4. the entrance of the bedroom"
+  },
+  "Leave the bathroom and go into the bedroom. Leave the bedroom and go into the hallway. Stop at the edge of the table under the mirror in the hall. ": {
+    "actions": "1. Leave the bathroom  \n2. Go into the bedroom  \n3. Leave the bedroom  \n4. Go into the hallway  \n5. Stop at the edge of the table under the mirror in the hall",
+    "landmarks": "1. the bathroom  \n2. the bedroom  \n3. the bedroom  \n4. the hallway  \n5. the edge of the table under the mirror in the hall"
+  },
+  "Exit the bathroom, wait at the white rug in the hallway. ": {
+    "actions": "1. Exit the bathroom  \n2. Wait at the white rug in the hallway",
+    "landmarks": "1. bathroom  \n2. white rug  \n3. hallway"
+  },
+  "Turn right and go straight past the table and chairs. Wait at the kitchen entrance. ": {
+    "actions": "1. Turn right  \n2. Go straight past the table and chairs  \n3. Wait at the kitchen entrance",
+    "landmarks": "1. the table and chairs  \n2. the kitchen entrance"
+  },
+  "Leave the fitness area, and go left. Take the first right at the wine room. Walk straight ahead into the TV room. Stop once you enter the room. ": {
+    "actions": "1. Leave the fitness area  \n2. Go left  \n3. Take the first right at the wine room  \n4. Walk straight ahead into the TV room  \n5. Stop once you enter the room",
+    "landmarks": "1. fitness area  \n2. wine room  \n3. TV room"
+  },
+  "Walk to the living room on the far side of the counter. Stop next to the end table next to the couch with the bookshelf on your right. ": {
+    "actions": "1. Walk to the living room on the far side of the counter.  \n2. Stop next to the end table next to the couch.  \n3. Ensure the bookshelf is on your right.",
+    "landmarks": "1. the living room on the far side of the counter  \n2. the end table next to the couch  \n3. the bookshelf"
+  },
+  "Walk into the bedroom on the right of the stairs. Take a left before you reach the bed and wlk straight into the bathroom. Stop outside of the little room with the toilet. ": {
+    "actions": "1. Walk into the bedroom on the right of the stairs.  \n2. Take a left before reaching the bed.  \n3. Walk straight into the bathroom.  \n4. Stop outside of the little room with the toilet.",
+    "landmarks": "1. the bedroom on the right of the stairs  \n2. the bed  \n3. the bathroom  \n4. the little room with the toilet"
+  },
+  "Turn right and exit the kitchen and enter the hallway with the stairs.  Walk around the stair well and enter the laundry room. ": {
+    "actions": "1. Turn right  \n2. Exit the kitchen  \n3. Enter the hallway with the stairs  \n4. Walk around the stair well  \n5. Enter the laundry room",
+    "landmarks": "1. kitchen  \n2. hallway with the stairs  \n3. stair well  \n4. laundry room"
+  },
+  "Leave the bathroom and take a right. Walk down the hallway into the entry way and stop next to the console table on the right, and the banister to the stairs on the right. ": {
+    "actions": "1. Leave the bathroom  \n2. Take a right  \n3. Walk down the hallway into the entry way  \n4. Stop next to the console table on the right  \n5. Stop next to the banister to the stairs on the right",
+    "landmarks": "1. bathroom  \n2. hallway  \n3. entry way  \n4. console table  \n5. banister  \n6. stairs"
+  },
+  "Walk past hall table. Walk into bedroom. Make left at table clock. Wait at bathroom door threshold. ": {
+    "actions": "1. Walk past hall table  \n2. Walk into bedroom  \n3. Make left at table clock  \n4. Wait at bathroom door threshold",
+    "landmarks": "1. hall table  \n2. bedroom  \n3. table clock  \n4. bathroom door threshold"
+  },
+  "Exit closet, and walk past bed. Walk out open bedroom door, and wait at top of stair landing. ": {
+    "actions": "1. Exit closet  \n2. Walk past bed  \n3. Walk out open bedroom door  \n4. Wait at top of stair landing",
+    "landmarks": "1. closet  \n2. bed  \n3. open bedroom door  \n4. top of stair landing"
+  },
+  "Head out of the shower and out of the bathroom.  Go toward the bedroom.  Go in the bedroom and stop at the side of the bed. ": {
+    "actions": "1. Head out of the shower  \n2. Head out of the bathroom  \n3. Go toward the bedroom  \n4. Go in the bedroom  \n5. Stop at the side of the bed",
+    "landmarks": "1. the shower  \n2. the bathroom  \n3. the bedroom  \n4. the bedroom  \n5. the side of the bed"
+  },
+  "Go alongside the pool towards the bar directly in front of you. ": {
+    "actions": "1. Go alongside the pool  \n2. Move towards the bar directly in front of you",
+    "landmarks": "1. the pool  \n2. the bar"
+  },
+  "Leave the sauna and enter the pool room. Stand on the platform at the end of the pool near the lounge chairs. ": {
+    "actions": "1. Leave the sauna  \n2. Enter the pool room  \n3. Stand on the platform at the end of the pool near the lounge chairs",
+    "landmarks": "1. the sauna  \n2. the pool room  \n3. the platform at the end of the pool near the lounge chairs  \n4. the lounge chairs"
+  },
+  "Turn around and exit the doorway. Turn left and exit the door. Stop next to the pool. ": {
+    "actions": "1. Turn around  \n2. Exit the doorway  \n3. Turn left  \n4. Exit the door  \n5. Stop next to the pool",
+    "landmarks": "1. doorway  \n2. door  \n3. pool"
+  },
+  "walk forward near the pool and make a right turn and stop at the doorway. ": {
+    "actions": "1. Walk forward near the pool  \n2. Make a right turn  \n3. Stop at the doorway",
+    "landmarks": "1. the pool  \n2. the doorway"
+  },
+  "Walk straight out the door in front of you and follow the red carpet. Keep going through the room with the ropes and stop when you enter the next room with ropes. ": {
+    "actions": "1. Walk straight out the door in front of you  \n2. Follow the red carpet  \n3. Keep going through the room with the ropes  \n4. Stop when you enter the next room with ropes",
+    "landmarks": "1. the door in front of you  \n2. the red carpet  \n3. the room with the ropes  \n4. the next room with ropes"
+  },
+  "Walk out through the door. Follow the red carpet to the right of the table. Stop in the next doorway. ": {
+    "actions": "1. Walk out through the door.  \n2. Follow the red carpet to the right of the table.  \n3. Stop in the next doorway.",
+    "landmarks": "1. the door  \n2. the red carpet  \n3. the table  \n4. the next doorway"
+  },
+  "Walk forward along red carpet. Stop at the fire extinguisher. ": {
+    "actions": "1. Walk forward along red carpet  \n2. Stop at the fire extinguisher",
+    "landmarks": "1. red carpet  \n2. fire extinguisher"
+  },
+  "Go into the room with the tile floor and wait. ": {
+    "actions": "1. Go into the room with the tile floor  \n2. Wait",
+    "landmarks": "1. the room with the tile floor"
+  },
+  "Turn right and walk along the red carpet to your right. Walk past the doorway wait by the glass info panes. ": {
+    "actions": "1. Turn right  \n2. Walk along the red carpet to your right  \n3. Walk past the doorway  \n4. Wait by the glass info panes",
+    "landmarks": "1. red carpet  \n2. doorway  \n3. glass info panes"
+  },
+  "Walk straight until you can't anymore then turn left. Wait near the door way straight ahead. ": {
+    "actions": "1. Walk straight until you can't anymore  \n2. Turn left  \n3. Wait near the doorway straight ahead",
+    "landmarks": "1. Walk straight until you can't anymore  \n2. the doorway straight ahead"
+  },
+  "Walk through the bedroom and exit through the door left of the red bed. Head into the next room. Walk forward into next room. Stop at the next door exiting the room. ": {
+    "actions": "1. Walk through the bedroom  \n2. Exit through the door left of the red bed  \n3. Head into the next room  \n4. Walk forward into the next room  \n5. Stop at the next door exiting the room",
+    "landmarks": "1. the bedroom  \n2. the door left of the red bed  \n3. the next room  \n4. the next room  \n5. the next door exiting the room"
+  },
+  "Turn around and walk down the red rug and cross the room. Stop once you enter the next room and stop. ": {
+    "actions": "1. Turn around  \n2. Walk down the red rug  \n3. Cross the room  \n4. Stop once you enter the next room  \n5. Stop",
+    "landmarks": "1. red rug  \n2. room  \n3. next room"
+  },
+  "Take the leftmost door. Walk past the large painting to your left. Take a left and wait in the doorway. ": {
+    "actions": "1. Take the leftmost door.  \n2. Walk past the large painting to your left.  \n3. Take a left.  \n4. Wait in the doorway.",
+    "landmarks": "1. leftmost door  \n2. large painting  \n3. doorway"
+  },
+  "Walk forward and enter the next room.  Stop at the doors on the far side. ": {
+    "actions": "1. Walk forward  \n2. Enter the next room  \n3. Stop at the doors on the far side",
+    "landmarks": "1. next room  \n2. doors on the far side"
+  },
+  "Walk along the carpet. Turn left and enter the rightmost doorway. Wait on the first few steps of the stairs. ": {
+    "actions": "1. Walk along the carpet.  \n2. Turn left.  \n3. Enter the rightmost doorway.  \n4. Wait on the first few steps of the stairs.",
+    "landmarks": "1. the carpet  \n2. the rightmost doorway  \n3. the first few steps of the stairs"
+  },
+  "Exit the bathroom, go up the stairs, turn right, walk down the hall, enter the room at the end of the hall, wait at the sculpture. ": {
+    "actions": "1. Exit the bathroom  \n2. Go up the stairs  \n3. Turn right  \n4. Walk down the hall  \n5. Enter the room at the end of the hall  \n6. Wait at the sculpture",
+    "landmarks": "1. bathroom  \n2. stairs  \n3. hall  \n4. room at the end of the hall  \n5. sculpture"
+  },
+  "Leave the room and take a left int he hall. Enter the room which is first on the right.Take a right and stop on the rug in front of the animal head on the floor. ": {
+    "actions": "1. Leave the room  \n2. Take a left in the hall  \n3. Enter the room which is first on the right  \n4. Take a right  \n5. Stop on the rug in front of the animal head on the floor",
+    "landmarks": "1. the room  \n2. the hall  \n3. the room which is first on the right  \n4. the rug  \n5. the animal head on the floor"
+  },
+  "GO straight, take a left once you enter the bedroom. Stop in the bathroom. ": {
+    "actions": "1. GO straight  \n2. take a left once you enter the bedroom  \n3. Stop in the bathroom",
+    "landmarks": "1. bedroom  \n2. bathroom"
+  },
+  "Turn right at the post and walk forward alongside the glass doors on the left. Wait in front of the pool table. ": {
+    "actions": "1. Turn right at the post  \n2. Walk forward alongside the glass doors on the left  \n3. Wait in front of the pool table",
+    "landmarks": "1. the post  \n2. the glass doors  \n3. the pool table"
+  },
+  "Walk past sisal carpet runner. Wait at open white door. ": {
+    "actions": "1. Walk past sisal carpet runner  \n2. Wait at open white door",
+    "landmarks": "1. sisal carpet runner  \n2. open white door"
+  },
+  "follow the bay windows then take a left. go slightly right and stop by the staircase. ": {
+    "actions": "1. follow the bay windows  \n2. take a left  \n3. go slightly right  \n4. stop by the staircase",
+    "landmarks": "1. the bay windows  \n2. the staircase"
+  },
+  "Walk forward along the railing to the balcony. Go past the cabinet on your left. Stop on the rug before you pass the first bed. ": {
+    "actions": "1. Walk forward along the railing to the balcony  \n2. Go past the cabinet on your left  \n3. Stop on the rug before you pass the first bed",
+    "landmarks": "1. the railing  \n2. the balcony  \n3. the cabinet  \n4. the rug  \n5. the first bed"
+  },
+  "Move ahead in between bar and table to the chair. ": {
+    "actions": "1. Move ahead  \n2. Navigate between the bar and table  \n3. Go to the chair",
+    "landmarks": "1. the bar  \n2. the table  \n3. the chair"
+  },
+  "Turn around and walk past a wooden cabinet on the right.  Then turn to the right and walk in the bedroom.  Turn to the right again, and there will be a bathroom.  Stop right inside the doorway.  Wait there. ": {
+    "actions": "1. Turn around  \n2. Walk past a wooden cabinet on the right  \n3. Turn to the right  \n4. Walk into the bedroom  \n5. Turn to the right again  \n6. Stop right inside the doorway  \n7. Wait there",
+    "landmarks": "1. a wooden cabinet on the right  \n2. the bedroom  \n3. the doorway"
+  },
+  "Go up the stairs and take a left. Walk towards the couch and chairs in the sitting area. Walk through the sitting area and stop in front of the first door to the balcony on your left. ": {
+    "actions": "1. Go up the stairs  \n2. Take a left  \n3. Walk towards the couch and chairs in the sitting area  \n4. Walk through the sitting area  \n5. Stop in front of the first door to the balcony on your left",
+    "landmarks": "1. stairs  \n2. couch and chairs  \n3. sitting area  \n4. first door to the balcony"
+  },
+  "walk towards fireplace, walk on the left side of the brown couch, turn right after couch, turn left after four person table and stop in front of barstools. ": {
+    "actions": "1. Walk towards fireplace  \n2. Walk on the left side of the brown couch  \n3. Turn right after couch  \n4. Turn left after four person table  \n5. Stop in front of barstools",
+    "landmarks": "1. fireplace  \n2. brown couch  \n3. four person table  \n4. barstools"
+  }
+}
