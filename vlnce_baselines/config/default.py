@@ -14,7 +14,7 @@ from habitat_extensions.config.default import (
 _C = CN()
 _C.BASE_TASK_CONFIG_PATH = "habitat_extensions/config/vlnce_task.yaml"
 _C.TASK_CONFIG = CN()  # task_config will be stored as a config node
-_C.TRAINER_NAME = "dagger"
+_C.TRAINER_NAME = "schedulesampler-OPENNAV"
 _C.ENV_NAME = "VLNCEDaggerEnv"
 _C.SIMULATOR_GPU_IDS = [0]
 _C.VIDEO_OPTION = []  # options: "disk", "tensorboard"
@@ -27,7 +27,7 @@ _C.RESULTS_DIR = "data/checkpoints/pretrained/evals"
 # -----------------------------------------------------------------------------
 _C.EVAL = CN()
 # The split to evaluate on
-_C.EVAL.SPLIT = "val_seen"
+_C.EVAL.SPLIT = "val_unseen"
 _C.EVAL.EPISODE_COUNT = -1
 _C.EVAL.LANGUAGES = ["en-US", "en-IN"]
 _C.EVAL.SAMPLE = False
@@ -131,7 +131,7 @@ _C.RL.POLICY.OBS_TRANSFORMS.RESIZER_PER_SENSOR.SIZES = [
 # MODELING CONFIG
 # -----------------------------------------------------------------------------
 _C.MODEL = CN()
-_C.MODEL.policy_name = "CMAPolicy"  # or "Seq2SeqPolicy"
+_C.MODEL.policy_name = "PolicyViewSelectionCMA"  # or "Seq2SeqPolicy"
 _C.MODEL.ablate_depth = False
 _C.MODEL.ablate_rgb = False
 _C.MODEL.ablate_instruction = False
@@ -178,6 +178,9 @@ _C.MODEL.SEQ2SEQ.use_prev_action = False
 _C.MODEL.PROGRESS_MONITOR = CN()
 _C.MODEL.PROGRESS_MONITOR.use = False
 _C.MODEL.PROGRESS_MONITOR.alpha = 1.0  # loss multiplier
+
+_C.GPU_NUMBERS = 1
+_C.LOGGER_FILE = "logs/strider_nav.log"
 
 
 def purge_keys(config: CN, keys: List[str]) -> None:
@@ -227,3 +230,14 @@ def get_config(
 
     config.freeze()
     return config
+
+# LLM/VLM config
+_C.LLM = "gpt-4o"
+_C.API_KEY = ""
+_C.VLM = "gpt-4o"
+_C.VLM_API_KEY = ""
+_C.CHECKPOINT_FOLDER = "data/checkpoints/pretrained/"
+_C.EVAL_CKPT_PATH_DIR = "data/checkpoints/pretrained/"
+_C.LOG_FILE = "log.txt"
+
+cfg = _C

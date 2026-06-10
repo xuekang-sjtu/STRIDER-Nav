@@ -56,10 +56,21 @@ class llmClient:
             self.model = model_type
             self.client = OpenAI(
                 api_key="not-needed",  # This value doesn't matter for local deployment
-                base_url="http://0.0.0.0:23333/v1"
+                base_url=os.environ.get("OPENAI_BASE_URL", "http://0.0.0.0:23333/v1")
+            )
+        elif "glm" in model_type.lower():
+            self.model = model_type
+            self.client = OpenAI(
+                api_key=api_key,
+                base_url="https://models.sjtu.edu.cn/api/v1"
             )
         else:
-            raise ValueError(f"Unknown model type: {model_type}. Use 'gpt' or 'opensource'.")
+            self.model = model_type
+            effective_base_url = os.environ.get("OPENAI_BASE_URL") or base_url or "https://models.sjtu.edu.cn/api/v1"
+            self.client = OpenAI(
+                api_key=api_key,
+                base_url=effective_base_url
+            )
         
         print(f"Initialized LLM client with model: {self.model}")
 
