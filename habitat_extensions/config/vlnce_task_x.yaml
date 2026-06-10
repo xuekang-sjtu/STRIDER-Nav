@@ -45,10 +45,10 @@ TASK:
     SUCCESS_DISTANCE: 3.0
   NDTW:
     SUCCESS_DISTANCE: 3.0
-    GT_PATH: data/datasets/RxR_VLNCE_v0/val_unseen/open_nav_val_unseen_guide_gt.json.gz
+    GT_PATH: ../../datasets/datasets/RxR_VLNCE_v0/val_unseen/open_nav_val_unseen_guide_gt.json.gz
   SDTW:
     SUCCESS_DISTANCE: 3.0
-    GT_PATH: data/datasets/RxR_VLNCE_v0/val_unseen/open_nav_val_unseen_guide_gt.json.gz
+    GT_PATH: ../../datasets/datasets/RxR_VLNCE_v0/val_unseen/open_nav_val_unseen_guide_gt.json.gz
   ORACLE_SUCCESS:
     SUCCESS_DISTANCE: 3.0
 DATASET:
@@ -56,7 +56,7 @@ DATASET:
   SPLIT: val_unseen
   ROLES: [guide]
   LANGUAGES: [en-US, en-IN]
-  DATA_PATH: data/datasets/RxR_VLNCE_v0/val_unseen/open_nav_val_unseen_guide.json.gz
-  SCENES_DIR: data/scene_datasets/
+  DATA_PATH: ../../datasets/datasets/RxR_VLNCE_v0/val_unseen/open_nav_val_unseen_guide.json.gz
+  SCENES_DIR: ../../datasets/scene_datasets/
   EPISODES_TO_LOAD: 1223 # Change this to run more episodes
 
