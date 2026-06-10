@@ -420,7 +420,7 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
             )
             if os.path.exists(fname):
                 print(f"skipping -- evaluation exists. File path: {fname}")
-                user_input = input("Do you want to overwrite the results? (yes/no): ").strip().lower()
+                user_input = "yes"  # auto-continue
                 if user_input != "yes":
                     print("Skipping evaluation.")
                     return
@@ -430,7 +430,7 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
             fname = config.LOGGER_FILE
             if os.path.exists(fname):
                 print(f"skipping -- evaluation exists. File path: {fname}")
-                user_input = input("Do you want to overwrite the results? (yes/no): ").strip().lower()
+                user_input = "yes"  # auto-continue
                 if user_input != "yes":
                     print("Skipping evaluation.")
                     return
@@ -440,7 +440,7 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
             fname = config.VIDEO_DIR
             if os.path.exists(fname):
                 print(f"skipping -- evaluation exists. File path: {fname}")
-                user_input = input("Do you want to overwrite the results? (yes/no): ").strip().lower()
+                user_input = "yes"  # auto-continue
                 if user_input != "yes":
                     print("Skipping evaluation.")
                     return
