@@ -911,7 +911,5 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
             
         self.traj = self.collect_val_traj()
         debug = False
-        self.traj = ['1092']
-        debug = True
         self._eval_llm(debug)
 
