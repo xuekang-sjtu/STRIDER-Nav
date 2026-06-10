@@ -7,8 +7,7 @@ class Open_Nav():
     def __init__(self, device, llm_type, llm_api_key, vlm_type, vlm_api_key):
         self.device = device
         self.llm = llmClient(llm_type, llm_api_key)
-        # self.spatial = spatialClient(self.device)
-        # self.qwen = QwenClient(self.device)
+        self.spatial = spatialClient(self.device)
         self.qwen = QwenAPIClient(vlm_type, vlm_api_key)
         
     # =====================================
