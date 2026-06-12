@@ -457,7 +457,10 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
             episodes_allowed=self.traj
         ) 
 
-        envs.number_of_episodes = [config.TASK_CONFIG.DATASET.EPISODES_TO_LOAD] # set the number of episodes
+        episode_count = config.TASK_CONFIG.DATASET.EPISODES_TO_LOAD
+        if episode_count <= 0:
+            episode_count = len(self.traj)
+        envs.number_of_episodes = [episode_count]
         dataset_length = sum(envs.number_of_episodes) 
         print('local rank:', self.local_rank, '|', 'dataset length:', dataset_length)
 
@@ -530,7 +533,13 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
         else:
             actions_cache = {} 
         
-        navigator = Open_Nav(self.device, config.LLM, config.API_KEY, config.VLM)
+        navigator = Open_Nav(
+            self.device,
+            config.LLM,
+            config.API_KEY,
+            config.VLM,
+            config.VLM_API_KEY,
+        )
         current_step = 0
         nav_history = []
         obs_history = []
@@ -873,6 +882,8 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
         self.config.TASK_CONFIG.DATASET.ROLES = ["guide"]
         self.config.TASK_CONFIG.TASK.MEASUREMENTS = ['POSITION',
                                                      'STEPS_TAKEN',
+                                                     'TOP_DOWN_MAP_VLNCE',
+                                                     'COLLISIONS',
                                                      ]
         if 'HIGHTOLOW' in self.config.TASK_CONFIG.TASK.POSSIBLE_ACTIONS:
             idx = self.config.TASK_CONFIG.TASK.POSSIBLE_ACTIONS.index('HIGHTOLOW')
@@ -922,4 +933,3 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
         self.traj = self.collect_val_traj()
         debug = False
         self._eval_llm(debug)
-

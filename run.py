@@ -105,10 +105,21 @@ def run_exp(exp_name: str, exp_config: str,
         config.API_KEY = api_key
     if vlm is not None:
         config.VLM = vlm
+    if vlm_api_key is not None:
+        config.VLM_API_KEY = vlm_api_key
 
     if cross_floor_filter is not None:
-        from cross_floor_filter import get_cross_floor_episode_ids
-        allowed = get_cross_floor_episode_ids(cross_floor_filter)
+        from cross_floor_filter import get_cross_floor_ids_from_dataset
+        import habitat
+        dataset = habitat.make_dataset(
+            config.TASK_CONFIG.DATASET.TYPE, config=config.TASK_CONFIG.DATASET
+        )
+        allowed = get_cross_floor_ids_from_dataset(dataset, cross_floor_filter)
+        if not allowed:
+            raise ValueError(
+                f"Cross-floor filter [{cross_floor_filter}] matched 0 episodes "
+                f"for dataset path {config.TASK_CONFIG.DATASET.DATA_PATH!r}."
+            )
         config.TASK_CONFIG.DATASET.EPISODES_ALLOWED = allowed
         print(f"Cross-floor filter [{cross_floor_filter}]: {len(allowed)} episodes")
 
