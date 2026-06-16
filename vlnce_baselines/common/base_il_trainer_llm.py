@@ -666,6 +666,8 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
                         step=current_step,
                         available=bool(ssa_proposal.get("available", False)),
                         reason=str(ssa_proposal.get("reason", "")),
+                        viewpoint=next_vp,
+                        view_yaw_deg=selected_ssa_yaw_deg,
                     )
                     nav_logger.info(
                         f"[SSA] step={current_step} episode={current_episodes[0].episode_id} "
@@ -809,6 +811,7 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
                 nav_history = []
                 obs_history = []
                 action_id = 0
+                ssa_trace = ssa_controller.episode_trace()
                 nav_logger.info(
                     f"[SSA] episode summary | episode={current_episodes[i].episode_id} {ssa_controller.episode_summary_text()}"
                 )
@@ -816,6 +819,17 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
                 info = infos[i]
                 metric = {}
                 metric['steps_taken'] = info['steps_taken']
+                metric["ssa_summary"] = {
+                    "proposal_seen": bool(ssa_trace["proposal_seen"]),
+                    "delegated": bool(ssa_trace["delegated"]),
+                    "takeover_success": bool(ssa_trace["takeover_success"]),
+                    "takeover_reason": str(ssa_trace["takeover_reason"]),
+                    "available_steps": list(ssa_trace["available_steps"]),
+                    "delegate_declined_steps": list(ssa_trace["delegate_declined_steps"]),
+                    "rejection_reasons": list(ssa_trace["rejection_reasons"]),
+                    "proposal_estimates": list(ssa_trace["proposal_estimates"]),
+                }
+                metric["ssa_trace"] = ssa_trace
                 ep_id = str(envs.current_episodes()[i].episode_id)
                 gt_path = np.array(self.gt_data[ep_id]['locations']).astype(float)
                 if 'current_path' in envs.current_episodes()[i].info.keys():
