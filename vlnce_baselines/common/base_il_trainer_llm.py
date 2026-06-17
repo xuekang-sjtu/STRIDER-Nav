@@ -61,6 +61,7 @@ from vlnce_baselines.common.env_utils import (
 )
 from vlnce_baselines.common.utils import *
 from vlnce_baselines.common.map import get_structure_wp
+from shared.eval_metrics import format_episode_metric
 from shared.ssa import SSAController, ask_ssa_delegate, build_ssa_plan, execute_ssa_takeover
 
 
@@ -539,7 +540,7 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
         if not os.path.exists(f"cache_files/{dataset_name}"):
             os.makedirs(f"cache_files/{dataset_name}")
 
-        actions_cache_path = f"./cache_files/{dataset_name}/actions_cache_detail.json"
+        actions_cache_path = f"./cache_files/{dataset_name}/actions_cache_strider-nav.json"
         if os.path.exists(actions_cache_path): 
             with open(actions_cache_path, "r", encoding="utf-8") as file:
                 actions_cache = json.load(file)
@@ -581,12 +582,15 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
             nav_logger.info("Instruction: "+instruction)
             actions, landmarks = "", ""
             if instruction not in actions_cache.keys():
+                nav_logger.info("[Cache MISS] Calling LLM to decompose instruction...")
                 actions = navigator.get_actions(instruction)
                 landmarks = navigator.get_landmarks(actions)
                 actions_cache[instruction] = {"actions": actions, "landmarks": landmarks}
                 with open(actions_cache_path, "w", encoding="utf-8") as f2:
                     json.dump(actions_cache, f2, indent=2)
+                nav_logger.info("[Cache SAVED] Instruction cached to disk")
             else:
+                nav_logger.info("[Cache HIT] Reusing cached instruction decomposition")
                 actions = actions_cache[instruction]["actions"]
                 landmarks = actions_cache[instruction]["landmarks"]
             nav_logger.info("Actions: "+actions)
@@ -698,6 +702,7 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
                                     reason=str(ssa_plan_result.get("error", "ssa_plan_empty")),
                                     planned_actions=0,
                                 )
+                                ssa_controller.enrich_last_plan_outcome(ssa_plan_result)
                             else:
                                 ssa_takeover_requested = True
                                 ssa_controller.record_plan_outcome(
@@ -706,6 +711,7 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
                                     reason="planned",
                                     planned_actions=len(ssa_plan_result.get("actions", [])),
                                 )
+                                ssa_controller.enrich_last_plan_outcome(ssa_plan_result)
                                 nav_logger.info(
                                     f"[SSA] step={current_step} episode={current_episodes[0].episode_id} delegated=yes planned_actions={len(ssa_plan_result.get('actions', []))}"
                                 )
@@ -714,6 +720,7 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
 
             # Action
             if not stop_flag:
+                ssa_takeover_finished_episode = False
                 if ssa_takeover_requested and ssa_plan_result is not None:
                     takeover = execute_ssa_takeover(envs, env_index=0, plan_result=ssa_plan_result)
                     nav_logger.info(f"[SSA] takeover finished | success={takeover.success} reason={takeover.reason} actions={takeover.actions_executed}")
@@ -723,6 +730,7 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
                         reason=str(takeover.reason),
                         actions_executed=int(takeover.actions_executed),
                     )
+                    ssa_controller.enrich_last_takeover_result(takeover.raw_result)
                     observations = takeover.observations
                     dones = takeover.dones
                     infos = takeover.infos
@@ -735,66 +743,67 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
                     if not dones[0]:
                         continue
                     dones[0] = True
-                    break
-                env_actions = []
-                env_actions.append({'action':
-                    {'action': 4,
-                    'action_args':{
-                        'angle': radius_dict[next_vp],
-                        'distance': distance_dict[next_vp],
-                    }}})
-                nav_logger.info(f"The final env action: {env_actions}")
-                outputs = envs.step(env_actions)     
+                    ssa_takeover_finished_episode = True
+                if not ssa_takeover_finished_episode:
+                    env_actions = []
+                    env_actions.append({'action':
+                        {'action': 4,
+                        'action_args':{
+                            'angle': radius_dict[next_vp],
+                            'distance': distance_dict[next_vp],
+                        }}})
+                    nav_logger.info(f"The final env action: {env_actions}")
+                    outputs = envs.step(env_actions)     
 
-                previous_image = images_list[next_vp]['rgb']               
-    
-                observations, _, dones, infos = [list(x) for x in zip(*outputs)]
+                    previous_image = images_list[next_vp]['rgb']               
+        
+                    observations, _, dones, infos = [list(x) for x in zip(*outputs)]
 
-                if len(config.VIDEO_OPTION) > 0: 
-                    vis_info = {
-                        'nodes': list(vis_positions[1:]),
-                        'waypoints': list(cand_pos.values()),
-                    }
-                    info = envs.get_metrics()
-                    frame = observations_to_image(observations[0], info[0], vis_info, items=['rgb','td'])
-                    frame = append_text_to_image(frame, instruction)
-                    Image.fromarray(frame).save(f'{config.VIDEO_DIR}/td_{current_episodes[0].episode_id}.png')
+                    if len(config.VIDEO_OPTION) > 0: 
+                        vis_info = {
+                            'nodes': list(vis_positions[1:]),
+                            'waypoints': list(cand_pos.values()),
+                        }
+                        info = envs.get_metrics()
+                        frame = observations_to_image(observations[0], info[0], vis_info, items=['rgb','td'])
+                        frame = append_text_to_image(frame, instruction)
+                        Image.fromarray(frame).save(f'{config.VIDEO_DIR}/td_{current_episodes[0].episode_id}.png')
 
-                instruction, images_list = self.generate_input(observations[-1])
-                error_number = 0 
+                    instruction, images_list = self.generate_input(observations[-1])
+                    error_number = 0 
 
-                # TAR
-                next_image = images_list['0']['rgb']
-                move_image = self.concat_images([previous_image, next_image], 1, 2, save_path='./image_show/movement.png')
-                if not debug:
-                    all_actions = [line.strip() for line in actions.strip().split('\n') if line.strip()]
-                    if not estimation.strip():
-                        executed_actions = []
+                    # TAR
+                    next_image = images_list['0']['rgb']
+                    move_image = self.concat_images([previous_image, next_image], 1, 2, save_path='./image_show/movement.png')
+                    if not debug:
+                        all_actions = [line.strip() for line in actions.strip().split('\n') if line.strip()]
+                        if not estimation.strip():
+                            executed_actions = []
+                        else:
+                            executed_actions = [line.strip() for line in estimation.strip().split('\n') if line.strip()]
+                        current_index = len(executed_actions)
+                        if current_index < len(all_actions):
+                            current_action = all_actions[current_index]
+                        else:
+                            current_action = all_actions[-1]
+                        executed, flag = navigator.action_completion(nav_logger, current_action, move_image)
+                        thought += executed
+
+                    if not debug:
+                        curr_observe = observe_dict[next_vp]
+                        nav_logger.info("========== save history ==========")
+                        nav_history = navigator.save_history(nav_logger, current_step, next_vp, thought, curr_observe, nav_history)
+
+                    # finish navigation
+                    if current_step == step_length:
+                        dones[0] = True 
                     else:
-                        executed_actions = [line.strip() for line in estimation.strip().split('\n') if line.strip()]
-                    current_index = len(executed_actions)
-                    if current_index < len(all_actions):
-                        current_action = all_actions[current_index]
-                    else:
-                        current_action = all_actions[-1]
-                    executed, flag = navigator.action_completion(nav_logger, current_action, move_image)
-                    thought += executed
-
-                if not debug:
-                    curr_observe = observe_dict[next_vp]
-                    nav_logger.info("========== save history ==========")
-                    nav_history = navigator.save_history(nav_logger, current_step, next_vp, thought, curr_observe, nav_history)
-
-                # finish navigation
-                if current_step == step_length:
-                    dones[0] = True 
-                else:
-                    for j, ob in enumerate(observations):
-                        envs.call_at(j, 
-                            'change_current_path',
-                            {'new_path': ob.pop('positions'),
-                            'collisions': ob.pop('collisions')}
-                        )
+                        for j, ob in enumerate(observations):
+                            envs.call_at(j, 
+                                'change_current_path',
+                                {'new_path': ob.pop('positions'),
+                                'collisions': ob.pop('collisions')}
+                            )
             else:
                 dones[0] = True
             
@@ -854,7 +863,14 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
 
                 metric['ndtw'] = nDTW
                 stats_episodes[current_episodes[i].episode_id] = metric 
-                nav_logger.info(metric)
+                nav_logger.info(
+                    format_episode_metric(
+                        current_episodes[i].episode_id,
+                        metric,
+                        stats=stats_episodes,
+                        total=episodes_to_eval,
+                    )
+                )
                 from resume_utils import append_episode_metric
                 append_episode_metric(
                     config.RESULTS_DIR,
