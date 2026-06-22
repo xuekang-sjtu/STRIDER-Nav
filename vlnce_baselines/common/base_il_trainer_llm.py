@@ -74,6 +74,19 @@ def _ssa_view_yaw_deg(angle_value):
     angle_deg = float(np.rad2deg(angle_value))
     return ((angle_deg + 180.0) % 360.0) - 180.0
 
+
+def _ssa_current_stage_from_estimation(actions, estimation):
+    action_lines = [
+        line.strip(" \t-0123456789.)")
+        for line in str(actions or "").splitlines()
+        if line.strip()
+    ]
+    executed_text = str(estimation or "").lower()
+    for action in action_lines:
+        if action and action.lower() not in executed_text:
+            return action
+    return action_lines[-1] if action_lines else ""
+
 from habitat_extensions.measures import NDTW
 from fastdtw import fastdtw
 
@@ -657,13 +670,13 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
                     next_vp, thought, error_number = navigator.test_decisions(nav_logger, fused_pred_thought, observation, instruction, error_number, observe_dict)
                     selected_ssa_view = images_dict.get(next_vp)
                     selected_ssa_yaw_deg = _ssa_view_yaw_deg(radius_dict[next_vp]) if next_vp in radius_dict else 0.0
-                    current_stage_text = str(estimation or "")
+                    current_stage_text = _ssa_current_stage_from_estimation(actions, estimation)
                     current_context_text = str(history_traj or "")
                     if selected_ssa_view is not None:
                         ssa_proposal = ssa_controller.update_proposal(
                             instruction="",
                             previous_output=current_stage_text,
-                            previous_plan=current_context_text,
+                            previous_plan="",
                             rgb=np.asarray(selected_ssa_view["rgb"]),
                             depth=np.asarray(selected_ssa_view["depth"]),
                             view_yaw_deg=selected_ssa_yaw_deg,
@@ -756,6 +769,29 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
                     dones = takeover.dones
                     infos = takeover.infos
                     instruction, images_list = self.generate_input(observations[-1])
+                    final_ssa_view = images_list.get("0") if isinstance(images_list, dict) else None
+                    if final_ssa_view is not None:
+                        _, final_observe_dict = navigator.observe_waypoint(
+                            nav_logger,
+                            current_step,
+                            "SSA takeover final view.",
+                            {"0": final_ssa_view},
+                        )
+                        ssa_thought = (
+                            f"SSA takeover executed {takeover.actions_executed} waypoint steps; "
+                            f"result={takeover.reason}."
+                        )
+                        nav_logger.info("========== save SSA history ==========")
+                        nav_history = navigator.save_history(
+                            nav_logger,
+                            current_step,
+                            "0",
+                            ssa_thought,
+                            final_observe_dict["0"],
+                            nav_history,
+                        )
+                    else:
+                        nav_logger.warning("SSA final forward view missing; history not updated")
                     observations = extract_instruction_tokens(
                         observations, self.config.TASK_CONFIG.TASK.INSTRUCTION_SENSOR_UUID
                     )
