@@ -106,6 +106,14 @@ class llmClient:
             "messages": messages,
             "temperature": 0
         }
+        max_tokens = int(os.environ.get("OPENAI_MAX_TOKENS", "2048"))
+        request_params["max_tokens"] = max_tokens
+        if "qwen" in self.model.lower() and os.environ.get("QWEN_ENABLE_THINKING", "0") != "1":
+            request_params["extra_body"] = {
+                "chat_template_kwargs": {
+                    "enable_thinking": False
+                }
+            }
 
         if self.model == 'deepseek':
             try:
@@ -116,13 +124,16 @@ class llmClient:
 
         if num_output == 1:
             chat_response = self._completion_with_backoff(**request_params)
-            answer = chat_response.choices[0].message.content
+            message = chat_response.choices[0].message
+            answer = message.content if message.content is not None else (getattr(message, "reasoning", None) or "")
             return answer
         else:
             responses = []
             for _ in range(num_output):
                 chat_response = self._completion_with_backoff(**request_params)
-                responses.append(chat_response.choices[0].message.content)
+                message = chat_response.choices[0].message
+                answer = message.content if message.content is not None else (getattr(message, "reasoning", None) or "")
+                responses.append(answer)
             return responses
 
     def get_response_not_stream(self, messages):
