@@ -1017,12 +1017,16 @@ class BaseVLNCETrainerLLM(BaseILTrainer):
         if num_episodes == 0:
             logger.info("No newly evaluated episodes with metrics were produced in this run.")
             return
+        numeric_keys = []
         for stat_key in valid_stats[0].keys():
+            if all(isinstance(v.get(stat_key), (int, float)) for v in valid_stats):
+                numeric_keys.append(stat_key)
+        for stat_key in numeric_keys:
             aggregated_stats[stat_key] = (
                 sum(v[stat_key] for v in valid_stats)
                 / num_episodes
             )
-        total = torch.tensor(num_episodes).cuda()
+        total = torch.tensor(num_episodes).cpu()
         if self.world_size > 1:
             dist.reduce(total,dst=0)
         total = total.item()

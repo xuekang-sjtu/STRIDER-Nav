@@ -982,5 +982,65 @@
   "Walk past the dining room table and towards the kitchen. Go up the first set of stairs to the left of the kitchen. Stop at the top of the stairs next to the white door. ": {
     "actions": "\n\n- Walk past the dining room table\n- Walk towards the kitchen\n- Locate the first set of stairs to the left of the kitchen\n- Go up the stairs\n- Stop at the top of the stairs next to the white door",
     "landmarks": "\n\ndining room table, kitchen, first set of stairs, white door"
+  },
+  "Walk past fridge. Walk up stairs. Wait on top of stair landing. ": {
+    "actions": "1. walk past fridge\n2. walk up stairs\n3. wait on top of stair landing",
+    "landmarks": "fridge, stairs, stair landing"
+  },
+  "Turn around, go past the fridge, and then turn right and go up the steps.  Just when you get to the top of the steps, stop.  Wait there. ": {
+    "actions": "1. turn around\n2. go past the fridge\n3. turn right\n4. go up the steps\n5. stop at the top of the steps\n6. wait",
+    "landmarks": "fridge, steps, top of the steps"
+  },
+  "Face in the direction of the refrigerator and head towards the stairs to the left of the refrigerator. Climb the stairs, then go forward until you can turn right to get to the foot of a flight of carpet covered stairs. Stop of the first step of those stairs. ": {
+    "actions": "1. Face the refrigerator\n2. Head towards the stairs to the left of the refrigerator\n3. Climb the stairs\n4. Go forward\n5. Turn right\n6. Proceed to the foot of the carpet-covered stairs\n7. Stop at the first step of the carpet-covered stairs",
+    "landmarks": "refrigerator, stairs to the left of the refrigerator, stairs, foot of the carpet-covered stairs, first step of the carpet-covered stairs"
+  },
+  "Walk down the stairs, take the first right, and stop in front of the bathroom. ": {
+    "actions": "1. walk down the stairs\n2. take the first right\n3. stop in front of the bathroom",
+    "landmarks": "stairs, bathroom"
+  },
+  "Walk towards the silver refrigerator.  Walk up the steps on the left.  Wait at top of stairs. ": {
+    "actions": "1. Walk towards the silver refrigerator\n2. Walk up the steps on the left\n3. Wait at top of stairs",
+    "landmarks": "silver refrigerator, steps on the left, top of stairs"
+  },
+  "Walk past the refrigertor, turn right and walk up the stairs, stop just before the bannister of the stairs on your right. ": {
+    "actions": "1. walk past the refrigerator\n2. turn right\n3. walk up the stairs\n4. stop just before the bannister on the right",
+    "landmarks": "refrigerator, stairs, bannister on the right"
+  },
+  "Turn right and go up the wood stairs. At the top walk forward and turn right. Then walk halfway up the stairs covered in carpet and stop. ": {
+    "actions": "1. turn right\n2. go up the wood stairs\n3. walk forward\n4. turn right\n5. walk halfway up the carpeted stairs\n6. stop",
+    "landmarks": "wood stairs, carpeted stairs"
+  },
+  "Turn right and walk up the first set of stairs. Wait at the bottom of the second set of stairs. ": {
+    "actions": "turn right\nwalk up the first set of stairs\nwait at the bottom of the second set of stairs",
+    "landmarks": "first set of stairs\nbottom of the second set of stairs"
+  },
+  "Go up the steps next to the fridge. Then turn right toward the bathroom. Stop at the top of the steps. ": {
+    "actions": "1. locate the steps next to the fridge\n2. go up the steps\n3. stop at the top of the steps\n4. turn right toward the bathroom",
+    "landmarks": "landmark1: the steps next to the fridge\nlandmark2: the steps\nlandmark3: the top of the steps\nlandmark4: the bathroom"
+  },
+  "Walk down the stairs and turn right at the bottom of the stairs. Go down the 3 steps and stop just outside the laundry room and bathroom. ": {
+    "actions": "1. walk down the stairs\n2. turn right at the bottom of the stairs\n3. go down the 3 steps\n4. stop just outside the laundry room and bathroom",
+    "landmarks": "stairs, bottom of the stairs, 3 steps, laundry room, bathroom"
+  },
+  "Go down the stairs. Turn right and continue down another set of steps and go straight. Stop in front of the doors to the bathroom and laundry rooms. ": {
+    "actions": "1. go down the stairs\n2. turn right\n3. continue down another set of steps\n4. go straight\n5. stop in front of the doors to the bathroom and laundry rooms",
+    "landmarks": "stairs, another set of steps, doors to the bathroom and laundry rooms"
+  },
+  "Move through the kitchen with the square table to your right. Continue moving forward to the staircase just after the refrigerator. Walk up the stairs and stop 18 inches before the end of the stair railing to your right. ": {
+    "actions": "move through the kitchen\nkeep the square table to your right\ncontinue moving forward\npass the refrigerator\nreach the staircase\nwalk up the stairs\nstop 18 inches before the end of the stair railing to your right",
+    "landmarks": "kitchen: kitchen\nsquare table: square table\nrefrigerator: refrigerator\nstaircase: staircase\nstairs: stairs\nstair railing: stair railing"
+  },
+  "Pass the fridge on the right and go up the steps then turn right and wait right at the top of the steps that go down. ": {
+    "actions": "pass the fridge on the right\ngo up the steps\nturn right\nwait at the top of the steps that go down",
+    "landmarks": "fridge, steps, top of the steps, steps that go down"
+  },
+  "Walk past the fridge, up the steps, and into the hall. Stop next to the first door on the left. ": {
+    "actions": "1. walk past the fridge\n2. go up the steps\n3. enter the hall\n4. stop next to the first door on the left",
+    "landmarks": "fridge, steps, hall, first door on the left"
+  },
+  "Travel up the stairs on right past the fridge, move down the hallway until the bottom on the stairwell, take a right towards the bathroom and wait just beyond the stairs. ": {
+    "actions": "1. locate the stairs on the right\n2. travel up the stairs\n3. pass the fridge\n4. move down the hallway\n5. reach the bottom of the stairwell\n6. turn right towards the bathroom\n7. move just beyond the stairs\n8. wait",
+    "landmarks": "stairs, fridge, hallway, stairwell, bathroom, stairs"
   }
 }
